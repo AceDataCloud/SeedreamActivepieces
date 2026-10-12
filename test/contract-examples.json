@@ -1,0 +1,60 @@
+[
+  {
+    "name": "seedream_generate_image-1",
+    "tool": "seedream_generate_image",
+    "inputs": {
+      "prompt": "Test"
+    },
+    "method": "POST",
+    "path": "/seedream/images",
+    "body": {
+      "prompt": "Test",
+      "async": true,
+      "response_format": "url"
+    }
+  },
+  {
+    "name": "seedream_edit_image-2",
+    "tool": "seedream_edit_image",
+    "inputs": {
+      "prompt": "Edit",
+      "image": "[\"https://example.org/reference.png\"]"
+    },
+    "method": "POST",
+    "path": "/seedream/images",
+    "body": {
+      "image": [
+        "https://example.org/reference.png"
+      ]
+    }
+  },
+  {
+    "name": "seedream_decompose_image-3",
+    "tool": "seedream_decompose_image",
+    "inputs": {
+      "image": "https://example.org/reference.png"
+    },
+    "method": "POST",
+    "path": "/seedream/images",
+    "body": {
+      "layer_decomposition": true,
+      "image": "https://example.org/reference.png"
+    }
+  },
+  {
+    "name": "seedream_tasks_retrieve_batch-4",
+    "tool": "seedream_tasks_retrieve_batch",
+    "inputs": {
+      "ids": "[\"owned-task\"]"
+    },
+    "method": "POST",
+    "path": "/seedream/tasks",
+    "body": {
+      "action": "retrieve_batch",
+      "ids": [
+        "owned-task"
+      ]
+    },
+    "read_only": true
+  }
+]
