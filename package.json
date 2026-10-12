@@ -1,0 +1,31 @@
+{
+  "name": "@acedatacloud/piece-seedream",
+  "version": "0.1.0",
+  "description": "Seedream actions through Ace Data Cloud for Activepieces",
+  "type": "commonjs",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.cjs",
+    "pack:check": "npm pack --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AceDataCloud/SeedreamActivepieces.git"
+  },
+  "homepage": "https://github.com/AceDataCloud/SeedreamActivepieces#readme",
+  "bugs": "https://github.com/AceDataCloud/SeedreamActivepieces/issues",
+  "license": "MIT",
+  "dependencies": {
+    "@activepieces/pieces-common": "0.12.5",
+    "@activepieces/pieces-framework": "0.32.0",
+    "ajv": "8.17.1"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

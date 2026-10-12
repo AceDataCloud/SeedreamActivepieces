@@ -1,0 +1,150 @@
+{
+  "name": "Seedream quickstart",
+  "type": "SHARED",
+  "summary": "",
+  "description": "",
+  "tags": [],
+  "blogUrl": "",
+  "metadata": {
+    "externalId": "seedream-quickstart-20261012"
+  },
+  "author": "Ace Data Cloud",
+  "categories": [],
+  "pieces": [
+    "@activepieces/piece-manual-trigger",
+    "@acedatacloud/piece-seedream"
+  ],
+  "flows": [
+    {
+      "displayName": "Seedream quickstart",
+      "trigger": {
+        "name": "trigger",
+        "valid": true,
+        "displayName": "Manual Trigger",
+        "nextAction": {
+          "name": "step_1",
+          "skip": false,
+          "type": "PIECE",
+          "valid": false,
+          "settings": {
+            "input": {
+              "auth": "",
+              "prompt": "A gentle sunrise over a quiet landscape.",
+              "image": "",
+              "size": "auto",
+              "sequential_image_generation": "auto",
+              "sequential_image_generation_options": "",
+              "watermark": false,
+              "output_format": "jpeg",
+              "tools": "",
+              "optimize_prompt_options": "",
+              "callback_url": "",
+              "background": "transparent"
+            },
+            "pieceName": "@acedatacloud/piece-seedream",
+            "actionName": "seedream_decompose_image",
+            "sampleData": {},
+            "pieceVersion": "0.1.0",
+            "propertySettings": {
+              "prompt": {
+                "type": "MANUAL"
+              },
+              "image": {
+                "type": "MANUAL"
+              },
+              "size": {
+                "type": "MANUAL"
+              },
+              "sequential_image_generation": {
+                "type": "MANUAL"
+              },
+              "sequential_image_generation_options": {
+                "type": "MANUAL"
+              },
+              "watermark": {
+                "type": "MANUAL"
+              },
+              "output_format": {
+                "type": "MANUAL"
+              },
+              "tools": {
+                "type": "MANUAL"
+              },
+              "optimize_prompt_options": {
+                "type": "MANUAL"
+              },
+              "callback_url": {
+                "type": "MANUAL"
+              },
+              "background": {
+                "type": "MANUAL"
+              }
+            },
+            "errorHandlingOptions": {
+              "retryOnFailure": {
+                "value": false
+              },
+              "continueOnFailure": {
+                "value": false
+              }
+            }
+          },
+          "displayName": "Seedream Decompose Image",
+          "lastUpdatedDate": "2026-10-12T00:00:00.000Z",
+          "nextAction": {
+            "name": "step_2",
+            "skip": false,
+            "type": "PIECE",
+            "valid": false,
+            "settings": {
+              "input": {
+                "auth": "",
+                "task_id": "{{step_1['output']['task_id']}}",
+                "wait_seconds": 0
+              },
+              "pieceName": "@acedatacloud/piece-seedream",
+              "actionName": "seedream_task_retrieve",
+              "sampleData": {},
+              "pieceVersion": "0.1.0",
+              "propertySettings": {
+                "task_id": {
+                  "type": "MANUAL"
+                },
+                "wait_seconds": {
+                  "type": "MANUAL"
+                }
+              },
+              "errorHandlingOptions": {
+                "retryOnFailure": {
+                  "value": false
+                },
+                "continueOnFailure": {
+                  "value": false
+                }
+              }
+            },
+            "displayName": "Seedream Retrieve Task",
+            "lastUpdatedDate": "2026-10-12T00:00:00.000Z"
+          }
+        },
+        "lastUpdatedDate": "2026-10-12T00:00:00.000Z",
+        "type": "PIECE_TRIGGER",
+        "settings": {
+          "propertySettings": {
+            "markdown": {
+              "type": "MANUAL"
+            }
+          },
+          "pieceName": "@activepieces/piece-manual-trigger",
+          "pieceVersion": "0.0.8",
+          "triggerName": "manual_trigger",
+          "input": {}
+        }
+      },
+      "valid": true,
+      "schemaVersion": "27",
+      "notes": []
+    }
+  ],
+  "status": "PUBLISHED"
+}
