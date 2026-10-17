@@ -37,3 +37,5 @@ npm pack --dry-run
 ```
 
 Source: https://github.com/AceDataCloud/SeedreamActivepieces · Issues: https://github.com/AceDataCloud/SeedreamActivepieces/issues · Contact: dev@acedata.cloud · License: MIT
+
+API requests verify HTTPS certificates and stay on `api.acedata.cloud`. Transport failures and HTTP errors are not retried automatically; inspect request history before resubmitting a creation. HTTPS proxy configuration is not supported by this transport.

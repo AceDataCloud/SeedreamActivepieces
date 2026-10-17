@@ -11,3 +11,5 @@
 异步创建只表示任务已受理。保存 `task_id`，用查询动作反复读取同一个任务；仅终态成功后使用 `media_urls`。超时后先查看[请求记录](https://platform.acedata.cloud/console/usages?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=seedream_activepieces_readme_request_history)，避免重复付费。删除/归档需显式确认。
 
 动作列表及公开 API 映射见 [English README](README.md)。源契约参照 [Dify 服务插件](https://github.com/AceDataCloud/SeedreamDify) `f47ac6b322eed59a3bb3ef924ea9fa82ea120ad4`；本 Piece 的源码、npm、实例安装和真实调用分别验收。
+
+API 请求验证 HTTPS 证书，且仅访问 `api.acedata.cloud`。网络失败与 HTTP 错误不自动重试；重新创建前先查请求历史。此传输方式不支持 HTTPS 代理配置。

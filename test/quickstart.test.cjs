@@ -3,7 +3,7 @@ const test = require('node:test');
 const flow = require('../examples/quickstart.json');
 const { seedream } = require('../dist/src/index.js');
 const { prepareRequest, invoke } = require('../dist/src/lib/client.js');
-const { httpClient } = require('@activepieces/pieces-common');
+const { httpClient } = require('../dist/src/lib/secure-http.js');
 
 test('quickstart prepares a valid generation and queries its same task without paid retries', async () => {
   const create = flow.flows[0].trigger.nextAction;
