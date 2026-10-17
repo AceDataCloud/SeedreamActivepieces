@@ -1,5 +1,6 @@
 import Ajv2020 from 'ajv/dist/2020';
-import { HttpMethod, httpClient } from '@activepieces/pieces-common';
+import { HttpMethod } from '@activepieces/pieces-common';
+import { httpClient } from './secure-http';
 
 import { endpoints, serviceName, taskPath, type EndpointSpec } from './contracts';
 
