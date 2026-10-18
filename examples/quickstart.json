@@ -39,7 +39,7 @@
             "pieceName": "@acedatacloud/piece-seedream",
             "actionName": "seedream_generate_image",
             "sampleData": {},
-            "pieceVersion": "0.1.0",
+            "pieceVersion": "0.1.1",
             "propertySettings": {
               "model": {
                 "type": "MANUAL"
@@ -85,7 +85,7 @@
               "pieceName": "@acedatacloud/piece-seedream",
               "actionName": "seedream_task_retrieve",
               "sampleData": {},
-              "pieceVersion": "0.1.0",
+              "pieceVersion": "0.1.1",
               "propertySettings": {
                 "task_id": {
                   "type": "MANUAL"

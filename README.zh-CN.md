@@ -1,6 +1,6 @@
 # Seedream Activepieces Piece
 
-本 Piece 通过 Ace Data Cloud 提供 Seedream 动作。Activepieces 0.92.2 及以上版本可由管理员在 **Catalogue → Pieces → Install Piece → NPM Registry** 安装 `@acedatacloud/piece-seedream@0.1.0`。npm 发布不等于进入 Activepieces 官方共享目录。
+本 Piece 通过 Ace Data Cloud 提供 Seedream 动作。Activepieces 0.92.2 及以上版本可由管理员在 **Catalogue → Pieces → Install Piece → NPM Registry** 安装 `@acedatacloud/piece-seedream@0.1.1`。npm 发布不等于进入 Activepieces 官方共享目录。
 
 1. 在 [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=seedream_activepieces_readme_api_key) 注册或登录。若没有通用应用，点击 **Initialize General Application**。
 2. 打开通用应用或具备 **Seedream** 权限的应用。通用 Key 可访问账号已获授权的服务；专用 Key 仅限对应服务。
