@@ -6,7 +6,10 @@
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.zh-CN.md",
+    "examples",
+    "docs/screenshots"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -26,6 +29,13 @@
     "ajv": "8.17.1"
   },
   "devDependencies": {
+    "@types/node": "24.11.0",
     "typescript": "5.9.3"
-  }
+  },
+  "keywords": [
+    "activepieces",
+    "piece",
+    "acedatacloud",
+    "seedream"
+  ]
 }

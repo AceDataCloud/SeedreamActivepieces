@@ -29,27 +29,22 @@
           "settings": {
             "input": {
               "auth": "",
+              "model": "doubao-seedream-5-0-lite-260128",
               "prompt": "A gentle sunrise over a quiet landscape.",
-              "image": "",
-              "size": "auto",
-              "sequential_image_generation": "auto",
-              "sequential_image_generation_options": "",
+              "size": "2K",
+              "sequential_image_generation": "disabled",
               "watermark": false,
-              "output_format": "jpeg",
-              "tools": "",
-              "optimize_prompt_options": "",
-              "callback_url": "",
-              "background": "transparent"
+              "output_format": "jpeg"
             },
             "pieceName": "@acedatacloud/piece-seedream",
-            "actionName": "seedream_decompose_image",
+            "actionName": "seedream_generate_image",
             "sampleData": {},
             "pieceVersion": "0.1.0",
             "propertySettings": {
-              "prompt": {
+              "model": {
                 "type": "MANUAL"
               },
-              "image": {
+              "prompt": {
                 "type": "MANUAL"
               },
               "size": {
@@ -58,25 +53,10 @@
               "sequential_image_generation": {
                 "type": "MANUAL"
               },
-              "sequential_image_generation_options": {
-                "type": "MANUAL"
-              },
               "watermark": {
                 "type": "MANUAL"
               },
               "output_format": {
-                "type": "MANUAL"
-              },
-              "tools": {
-                "type": "MANUAL"
-              },
-              "optimize_prompt_options": {
-                "type": "MANUAL"
-              },
-              "callback_url": {
-                "type": "MANUAL"
-              },
-              "background": {
                 "type": "MANUAL"
               }
             },
@@ -89,7 +69,7 @@
               }
             }
           },
-          "displayName": "Seedream Decompose Image",
+          "displayName": "Seedream Generate Image",
           "lastUpdatedDate": "2026-10-12T00:00:00.000Z",
           "nextAction": {
             "name": "step_2",

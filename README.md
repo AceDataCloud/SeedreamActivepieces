@@ -7,8 +7,10 @@ Use Seedream through Ace Data Cloud in a self-hosted Activepieces workflow. [中
 ## Setup
 
 1. In **Platform Admin → Catalogue → Pieces → Install Piece → NPM Registry**, enter `@acedatacloud/piece-seedream` and version `0.1.0`.
-2. Create an Ace Data Cloud connection with a key authorized for this service. Enter the key without `Bearer `. Check [current pricing](https://platform.acedata.cloud/models) before generation.
-3. Import [the credential-free quickstart](examples/quickstart.json) if useful. Both action connections are empty; fill required inputs before running. Paid creation actions have retries disabled.
+2. Register or sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=seedream_activepieces_readme_api_key). If you have no General application, choose **Initialize General Application**. Open a General application or an application with **Seedream** access. A General key can access the services your account is entitled to use; a service-specific key is limited to that service.
+3. Use the application's copy button, or choose **Manage Keys → Create** to create a separate key named `Activepieces Seedream`. Set expiry and usage limits as needed. If you restrict **Allowed APIs**, include both `/seedream/images` and `/seedream/tasks`, then copy the key.
+4. Create an Activepieces connection and enter only the API key, without `Bearer `. A `platform-...` management token is not a generation API key. Keep the key in the connection, never in a flow export. Check [current pricing](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=seedream_activepieces_readme_pricing) and balance before generation.
+5. Import [the credential-free quickstart](examples/quickstart.json). It selects **Seedream Generate Image**, uses a text prompt with one non-sequential generation, and maps the returned task ID into **Seedream Retrieve Task**. Both connections are empty; select your own connection for each action before running. Paid creation retries are disabled. Run creation once; if the result is pending, repeat only the lookup with that same task ID. Image editing and decomposition need reference images and are separate actions.
 
 ## Actions
 
@@ -22,7 +24,7 @@ Use Seedream through Ace Data Cloud in a self-hosted Activepieces workflow. [中
 
 The actions above map to the published API operations used by the [Ace Data Cloud Dify plugin](https://github.com/AceDataCloud/SeedreamDify), source revision `f47ac6b322eed59a3bb3ef924ea9fa82ea120ad4`. Parameter forms and request validation use that contract snapshot. The Dify source is a mapping reference; this package has its own release and installation state.
 
-Async submission returns a `task_id` when accepted. Use the task retrieval action with that **same ID** until `status=succeeded`, `partial`, or `failed`; pending previews are not final media. A timeout does not prove the request was rejected. Inspect [request history](https://platform.acedata.cloud/console/usages) before submitting again. No paid action is automatically retried. Delete/archive operations require **Confirm**.
+Async submission returns a `task_id` when accepted. Use the task retrieval action with that **same ID** until `status=succeeded`, `partial`, or `failed`; pending previews are not final media. A timeout does not prove the request was rejected. Inspect [request history](https://platform.acedata.cloud/console/usages?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=seedream_activepieces_readme_request_history) before submitting again. No paid action is automatically retried. Delete/archive operations require **Confirm**.
 
 Only your API key and selected inputs are sent to `https://api.acedata.cloud`. Results remove credential and internal routing fields. Do not put keys in exported flows. The Piece does not fetch reference URLs itself. API billing is recorded in Credits in your Ace Data Cloud account; workflow runs are not a billing ledger.
 
@@ -35,3 +37,13 @@ npm pack --dry-run
 ```
 
 Source: https://github.com/AceDataCloud/SeedreamActivepieces · Issues: https://github.com/AceDataCloud/SeedreamActivepieces/issues · Contact: dev@acedata.cloud · License: MIT
+
+API requests verify HTTPS certificates and stay on `api.acedata.cloud`. Transport failures and HTTP errors are not retried automatically; inspect request history before resubmitting a creation. HTTPS proxy configuration is not supported by this transport.
+
+## Visual setup references
+
+![Copy a key or open Manage Keys: real redacted Ace console](docs/screenshots/get-api-key-en.png)
+![Create a dedicated key: real redacted Ace console](docs/screenshots/create-api-key-en.png)
+![Official Activepieces generic installation dialog](docs/screenshots/install-piece.png)
+
+References reused on 2026-10-18; [fixed sources and limits](docs/screenshots/onboarding-source.json). The installation picture is an official generic reference, not proof this Piece is in the shared catalog. After administrator installation, search the service name, select **by Ace Data Cloud**, and keep the raw API key in the action connection. Source PR, immutable npm release, official shared-catalog acceptance and first use are separate stages.
