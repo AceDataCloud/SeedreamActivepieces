@@ -20,4 +20,4 @@ API 请求验证 HTTPS 证书，且仅访问 `api.acedata.cloud`。网络失败�
 ![创建独立 Key：真实脱敏 Ace 控制台](docs/screenshots/create-api-key-en.png)
 ![官方 Activepieces 通用安装弹窗](docs/screenshots/install-piece.png)
 
-2026-10-18 复用的真实/官方参考图，[固定来源与边界](docs/screenshots/onboarding-source.json)保留。安装图不是本 Piece 已被官方共享目录收录的证明。管理员安装后按服务名搜索并核对 **by Ace Data Cloud**；Key 只放动作连接。源码 PR、npm 发版、官方目录收录与真实首用分别验收。
+2026-10-18 复用的真实/官方参考图，[固定来源与边界](docs/screenshots/onboarding-source.json)保留。安装图不是本 Piece 已被官方共享目录收录的证明。管理员安装后按服务名搜索并核对 **Seedream** 和已安装的 `@acedatacloud/piece-seedream` 包；Key 只放动作连接。源码 PR、npm 发版、官方目录收录与真实首用分别验收。

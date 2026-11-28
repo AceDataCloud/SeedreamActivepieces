@@ -6,7 +6,7 @@ Use Seedream through Ace Data Cloud in a self-hosted Activepieces workflow. [中
 
 ## Setup
 
-1. In **Platform Admin → Catalogue → Pieces → Install Piece → NPM Registry**, enter `@acedatacloud/piece-seedream` and version `0.1.3`.
+1. In **Platform Admin → Catalogue → Pieces → Install Piece → NPM Registry**, enter `@acedatacloud/piece-seedream` and version `0.1.4`.
 2. Register or sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen). If you have no General application, choose **Initialize General Application**. Open a General application or an application with **Seedream** access. A General key can access the services your account is entitled to use; a service-specific key is limited to that service.
 3. Use the application's copy button, or choose **Manage Keys → Create** to create a separate key named `Activepieces Seedream`. Set expiry and usage limits as needed. If you restrict **Allowed APIs**, include both `/seedream/images` and `/seedream/tasks`, then copy the key.
 4. Create an Activepieces connection and enter only the API key, without `Bearer `. A `platform-...` management token is not a generation API key. Keep the key in the connection, never in a flow export. Check [current pricing](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen) and balance before generation.
@@ -46,4 +46,4 @@ API requests verify HTTPS certificates and stay on `api.acedata.cloud`. Transpor
 ![Create a dedicated key: real redacted Ace console](docs/screenshots/create-api-key-en.png)
 ![Official Activepieces generic installation dialog](docs/screenshots/install-piece.png)
 
-References reused on 2026-10-18; [fixed sources and limits](docs/screenshots/onboarding-source.json). The installation picture is an official generic reference, not proof this Piece is in the shared catalog. After administrator installation, search the service name, select **by Ace Data Cloud**, and keep the raw API key in the action connection. Source PR, immutable npm release, official shared-catalog acceptance and first use are separate stages.
+References reused on 2026-10-18; [fixed sources and limits](docs/screenshots/onboarding-source.json). The installation picture is an official generic reference, not proof this Piece is in the shared catalog. After administrator installation, search the service name, select **Seedream** from the installed `@acedatacloud/piece-seedream` package, and keep the raw API key in the action connection. Source PR, immutable npm release, official shared-catalog acceptance and first use are separate stages.
