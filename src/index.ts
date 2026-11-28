@@ -3,7 +3,7 @@ import { actions } from './lib/actions';
 import { pieceAuth } from './lib/auth';
 
 export const seedream = createPiece({
-  displayName: "Seedream by Ace Data Cloud",
+  displayName: "Seedream",
   description: "Use Ace Data Cloud Seedream APIs in Activepieces workflows.",
   logoUrl: 'https://cdn.acedata.cloud/9egrbn.png',
   authors: ['Ace Data Cloud'],
